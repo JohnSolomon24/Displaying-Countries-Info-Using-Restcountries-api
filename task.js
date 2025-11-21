@@ -1,4 +1,4 @@
-let res = fetch("https://restcountries.com/v2/all");
+let res = fetch("https://restcountries.com/v3.1/all?fields=name,region,subregion,flags");
 
 res.then((data)=>data.json()).then((data1)=>{
     
@@ -35,7 +35,7 @@ res.then((data)=>data.json()).then((data1)=>{
         h7.setAttribute("style","font-size:30px:font-family:Times nwe Roman;padding:10px");
 
 
-        h5.innerHTML = `COUNTRY NAME :   ${data1[i].name}`
+        h5.innerHTML = `COUNTRY NAME :   ${data1[i].name.common}`
         h6.innerHTML = `REGION       :   ${data1[i].region}`
         h7.innerHTML = `SUB REGION   :   ${data1[i].subregion}`
 
